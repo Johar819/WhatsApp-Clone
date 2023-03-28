@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Sidebar from './Sidebar';
+import Chat from './Chat'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import Login  from './Login';
+import { useStateValue } from './StateProvider';
 function App() {
+  const [{user},dispatch]=useStateValue();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        !user ? (<Login />) : (
+          <div className='app__body'>
+            <BrowserRouter>
+              <Sidebar />
+              <Routes>
+                <Route path="/rooms/:roomId" element={<Chat />} />
+              </Routes>
+            </BrowserRouter>
+          </div>
+
+        )
+      }
+      {/* <h1> Let's build whatsapp-Clone</h1> */}
     </div>
   );
 }
