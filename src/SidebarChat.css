@@ -26,3 +26,31 @@ a{
      text-decoration: none !important;
      color:black
 }
+.SidebarChat__info>button{
+    color: gray !important;
+}
+#file{
+    display: none;
+}
+input:focus{
+    outline: none;
+}
+/* .css-1z10yd4-MuiFormControl-root-MuiTextField-root{ */
+    /* margin-top: -20px !important; */
+/* } */
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    min-width: 300px !important;
+    height: 300px !important;
+    background-color: rgba(232, 246, 247, 0.6) !important;
+}
+.SidebarChat__info > button{
+    font-weight: 800 !important;
+    color: black !important;
+}
+#create__cancel{
+    background-color: rgb(243, 42, 42) !important;
+}
+#create__submit{
+    background-color: rgb(88, 235, 88) !important;
+    color: black !important;
+}

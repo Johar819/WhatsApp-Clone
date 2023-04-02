@@ -3,12 +3,14 @@
     /* background-color:gray; */
     display: flex;
     flex-direction: column;
+    min-width: 400px;
 }
 .chat__header{
-    padding: 20px;
+    padding: 26px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid lightgray;
+    min-width: 400px;
 }
 .chat__headerInfo{
     flex: 1px;
@@ -46,6 +48,8 @@
     margin-top: 20px;
     border-radius: 10px;
     font-size: 16px;
+    display: block;
+    max-width: 500px;
 }
 .chat__name{
     position: absolute;
@@ -85,4 +89,22 @@
 .chat__footer> .MuiSvgIcon-root{
     padding: 10px;
     color: gray;
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    height: auto !important;
+    background-color: #dcf8c6 !important;
+}
+.css-hlj6pa-MuiDialogActions-root{
+    display: flex !important;
+    justify-content: center !important;
+}
+.css-ypiqx9-MuiDialogContent-root{
+    overflow-y: hidden !important;
+}
+.css-hlj6pa-MuiDialogActions-root>button{
+    background-color: rgb(245, 20, 20);
+    color: white;
+}
+.css-hlj6pa-MuiDialogActions-root>button:hover{
+    background-color: red;
 }

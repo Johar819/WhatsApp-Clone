@@ -6,10 +6,12 @@ import './Login.css'
 import { actionTypes } from './reducer'
 import { useStateValue } from './StateProvider'
 const Login = () => {
-    const [{},dispatch]=useStateValue();
+    const [{user},dispatch]=useStateValue();
     const signIn=()=>{
         signInWithPopup(auth,provider).then(result=>{
-            dispatch({type:actionTypes.SET_USER,user:result.user})
+            
+            dispatch({type:actionTypes.SET_USER,user:result.user});
+            sessionStorage.setItem('user',JSON.stringify(result.user));
         }).catch(e=>console.log(e.message))
     }
   return (

@@ -1,0 +1,23 @@
+.profile__img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.profile{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 25%;
+    transform: translate(-25%,0);
+}
+.profile__img__container{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+.profile>form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

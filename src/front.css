@@ -1,0 +1,11 @@
+.front{
+    display: flex;
+    flex: 1;
+    background-color: rgb(214, 229, 235);
+    justify-content: center;
+    align-items: center;
+}
+img{
+   width: auto;
+   height: 400px;
+}
